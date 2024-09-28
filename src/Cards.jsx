@@ -1,25 +1,22 @@
-import React from 'react'
-import ProductData from './ProductData'
-import Card from './Card'
-
+import React from "react";
+import ProductData from "./ProductData";
+import Card from "./Card";
 
 const Cards = () => {
-    
   return (
-    <>
-        <div className='flex flex-wrap justify-center items-center gap-10 h-screen'>
+          <div className="h-screen flex flex-wrap justify-center items-center gap-10">
             {ProductData.map((item) => {
-                return (
+              return (
                 <Card
-                    key={item.id}
-                    img={item.img}
-                    title={item.title}
-                    description={item.description}
-                />)
+                  key={item.id}
+                  img={item.img}
+                  title={item.title}
+                  description={item.description}
+                />
+              );
             })}
-        </div>   
-    </>
-  )
-}
+      </div>
+  );
+};
 
-export default Cards
+export default Cards;
